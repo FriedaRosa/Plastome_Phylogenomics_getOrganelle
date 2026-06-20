@@ -1,0 +1,7 @@
+data/Bischofia_MZ826267.gb
+*.fasta
+*.fq.gz
+*fq
+data/getorganelle_output/
+data/plastome_seq/
+data/TEMP/
