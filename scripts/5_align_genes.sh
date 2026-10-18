@@ -1,17 +1,27 @@
 #!/bin/bash
 
-
+source /home/frieda/miniconda3/etc/profile.d/conda.sh
 conda activate plastomes
 # run locally
 # align plastome sequences by gene
 
 alndir=data/plastome_seq
 
-# for each gene...
+# check if output (files ending in .mafft) already exist, else run loop
 
-for f in $alndir/*.fasta; do
-  mafft --thread 4 $f > $f.mafft
-done
+if ls $alndir/*.mafft 1> /dev/null 2>&1; then
+  echo "MAFFT output files already exist. Skipping alignment step."
+else
+  echo "MAFFT output files do not exist. Running alignment step."
+  # Align each gene.
+  for f in "$alndir"/*.fasta; do
+    mafft \
+      --maxiterate 1000 \
+      --localpair \
+      --thread -1 \
+      "$f" > "$f.mafft"
+  done
+fi
 
 
 conda deactivate

@@ -11,34 +11,34 @@ date
 
 
 
-echo -n "Running 0b_setup_data.sh --- "
-date
-bash ./scripts/0b_setup_data.sh
-date
+# echo -n "Running 0b_setup_data.sh --- "
+# date
+# bash ./scripts/0b_setup_data.sh
+# date
 
 
-echo -n "Running 1b_split_genes_to_fasta.py --- "
-date
-python3 ./scripts/1b_split_genes_to_fasta.py
-date
+# echo -n "Running 1b_split_genes_to_fasta.py --- "
+# date
+# python3 ./scripts/1b_split_genes_to_fasta.py
+# date
 
 
-echo -n "Running 2_run_getOrganelle_clean.sh --- "
-date
-bash ./scripts/2_run_getOrganelle_clean.sh
-date
+# echo -n "Running 2_run_getOrganelle_clean.sh --- "
+# date
+# bash ./scripts/2_run_getOrganelle_clean.sh
+# date
 
 
-echo -n "Running 3_archive_plastomes.sh --- "
-date
-bash ./scripts/3_archive_plastomes.sh
-date
+# echo -n "Running 3_archive_plastomes.sh --- "
+# date
+# bash ./scripts/3_archive_plastomes.sh
+# date
 
 
-echo -n "Running 4_blast_genes.R --- " 
-date
-Rscript ./scripts/4_blast_genes.R
-date
+# echo -n "Running 4_blast_genes.R --- " 
+# date
+# Rscript ./scripts/4_blast_genes.R
+# date
 
 echo -n "Running 5_align_genes.sh --- "
 date

@@ -35,8 +35,8 @@ for sample in $(ls "$reads_dir"/*_1_clean.paired.fq.gz | sed 's/_1_clean.paired.
   -s "$seed_file" \
   -k 21,45,65,85,105 \
   -R 15 \
+  --continue \
   --max-reads 1.5E7 \
-  --overwrite \
   -F embplant_pt \
   -t 8
 

@@ -102,9 +102,9 @@ blast_res <- blast_res %>%
   filter(n >= 10)
 
 # filter out selected samples manually (long branches, dubious ID etc.)
-to_exclude <- readLines("data/input/sequences/exclude_plastomes.txt")
-blast_res <- blast_res %>%
-  filter(! sample %in% to_exclude)
+# to_exclude <- readLines("data/input/sequences/exclude_plastomes.txt")
+# blast_res <- blast_res %>%
+#   filter(! sample %in% to_exclude)
 
 # per gene, write fasta files
 outdir <- "data/plastome_seq/"

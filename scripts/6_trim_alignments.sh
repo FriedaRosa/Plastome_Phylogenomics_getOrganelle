@@ -1,6 +1,6 @@
 #!/bin/bash
 # trim alignments
-
+source /home/frieda/miniconda3/etc/profile.d/conda.sh
 conda activate trimal
 
 for aln in data/plastome_seq/*fasta.mafft

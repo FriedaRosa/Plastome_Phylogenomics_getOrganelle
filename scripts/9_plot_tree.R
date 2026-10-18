@@ -13,6 +13,6 @@ pdf(width = 10, height = 8,
     file = "figures/plastome_tree.iqtree.pdf")
 par(mar = c(0,0,0,0))
 plot.phylo(tree, cex = 1, label.offset = 0.0001, underscore = TRUE, font = 1)
-nodelabels(tree$node.label, cex = 0.3)
+nodelabels(tree$node.label, cex = 1)
 dev.off()
 
