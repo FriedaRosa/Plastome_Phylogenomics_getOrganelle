@@ -24,44 +24,26 @@ python scripts/1_extract_genes.py \
 mkdir -p data/genes
 
 # ------------------------------ ## ------------------------------ #
-#' PART 2 : Download raw reads from SRA and use fastq-dump to convert them to FASTQ format # ----
+#' PART 2 : Create symlinks for the trimmed reads from HybSeq_pipeline_2026 # ----
 # ------------------------------ ## ------------------------------ #
 
-## This works with .fasta files from the raw reads instead of the GenBank file and is much slower (c. 2.5 Gb -  download takes a long time and requires a lot of disk space):
+# check if trimmed_reads directory exists, if not create symlinks:
 
-conda activate plastomes
+if [ -d "data/trimmed_reads" ]; then
+    echo "Directory 'data/trimmed_reads' already exists. Skipping symlink creation."
+else
+    echo "Creating symlinks for trimmed reads..."
+    # Create symlinks from trimmed raw reads to this folder:
+    src="$HOME/HybSeq_pipeline_2026/data/output/NGS_dataset/03-My_clean_data/"
+    dst="$HOME/Plastome_Phylogenomisc_2026/data/trimmed_reads"
 
-# Alternatively use SRA-tools (fastq-dump):
-# Download raw reads from SRA (SRR26662821 - the complete chloroplast genome of Bischofia polycarpa) and save them in the data/ folder
+    # Create the destination directory if it doesn't exist
+    mkdir -p "$dst"
 
-# --origfmt option preserves the original format of the reads, 
-# --split-files splits paired-end reads into separate files 
-# --gzip compresses the output files.
+    # Create symlinks for all .fq.gz files in the source directory
+    for f in "$src"/*.fq.gz; do
+        ln -s "$f" "$dst/$(basename "$f")"
+    done
+fi
 
-## This creates two files: SRR26662821_1.fastq.gz and SRR26662821_2.fastq.gz
-fastq-dump --origfmt --split-files --gzip SRR26662821 -O data/
-
-conda deactivate
-
-## Console echo: 
-# Read 11042824 spots for SRR26662821
-# Written 11042824 spots for SRR26662821
-
-
-# ------------------------------ ## ------------------------------ #
-#' PART 3 : Create symlinks for the trimmed reads from HybSeq_pipeline_2026 # ----
-# ------------------------------ ## ------------------------------ #
-
-# Create symlinks from trimmed raw reads to this folder:
-src="$HOME/HybSeq_pipeline_2026/data/output/NGS_dataset/03-My_clean_data/"
-dst="$HOME/Plastome_Phylogenomisc_2026/data/trimmed_reads"
-
-
-# Create the destination directory if it doesn't exist
-mkdir -p "$dst"
-
-# Create symlinks for all .fq.gz files in the source directory
-for f in "$src"/*.fq.gz; do
-    ln -s "$f" "$dst/$(basename "$f")"
-done
 
