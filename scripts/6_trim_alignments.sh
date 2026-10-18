@@ -8,7 +8,7 @@ do
   # output file name
   outf=$(echo $aln | sed 's/\.mafft/\.mafft\.trm/')
   # run trimAl - base settings, using a heuristic to determine removal scores
-  trimal -in $aln -out $outf -automated1 -keepheader
+  trimal -in $aln -out $outf -strictplus -keepheader
 done
 
 conda deactivate

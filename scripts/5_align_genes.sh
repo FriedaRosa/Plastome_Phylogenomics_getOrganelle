@@ -16,7 +16,7 @@ else
   # Align each gene.
   for f in "$alndir"/*.fasta; do
     mafft \
-      --maxiterate 1000 \
+      --maxiterate 10000 \
       --genafpair \
       --thread -1 \
       "$f" > "$f.mafft"

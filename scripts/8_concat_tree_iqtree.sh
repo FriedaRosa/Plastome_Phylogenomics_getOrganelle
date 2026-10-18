@@ -14,8 +14,8 @@ iqtree \
 -p partitions.txt \
 -pre "$prefix" \
 -m MFP \
--mtree \
--T 4 \
+-T 10 \
+-nm 10000 \
 -B 1000 \
 --redo
 

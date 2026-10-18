@@ -1,0 +1,349 @@
+IQ-TREE 3.1.1 built Apr  8 2026
+
+Input file name: data/plastome_seq/plastome.fasta.concat
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 27733
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+Since you used ModelFinder please also cite: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+NOTE: Alignment sequence type is auto-detected. If in doubt, specify it via -st option.
+Input data: 24 sequences with 123692 nucleotide sites
+Number of constant sites: 119768 (= 96.8276% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 119768 (= 96.8276% of all sites)
+Number of parsimony informative sites: 764
+Number of distinct site patterns: 3325
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: HKY+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+HKY+F+I+G4      -197853.358  395808.716 -   0.0151  395808.759 -   0.0151  396304.719 +    0.585
+HKY+F+G4        -197859.696  395819.391 - 7.24e-05  395819.432 - 7.27e-05  396305.669 +    0.364
+K3Pu+F+I+G4     -197850.916  395805.832 +   0.0637  395805.877 +   0.0638  396311.561 -   0.0191
+K3Pu+F+G4       -197857.244  395816.487 - 0.000309  395816.530 -  0.00031  396312.490 -    0.012
+TPM2u+F+I+G4    -197851.706  395807.411 -   0.0289  395807.456 -    0.029  396313.140 -  0.00869
+TPM2u+F+G4      -197858.051  395818.103 - 0.000138  395818.146 - 0.000138  396314.106 -  0.00536
+TN+F+I+G4       -197853.330  395810.660 -   0.0057  395810.705 -  0.00571  396316.389 -  0.00171
+TPM3u+F+I+G4    -197853.356  395810.711 -  0.00556  395810.756 -  0.00557  396316.440 -  0.00167
+TN+F+G4         -197859.673  395821.346 - 2.73e-05  395821.388 - 2.73e-05  396317.349 -  0.00106
+TPM3u+F+G4      -197859.695  395821.390 - 2.67e-05  395821.433 - 2.67e-05  396317.393 -  0.00104
+TIM+F+I+G4      -197850.888  395807.776 -   0.0241  395807.822 -   0.0241  396323.230 - 5.59e-05
+TIM+F+G4        -197857.220  395818.439 - 0.000117  395818.484 - 0.000117  396324.168 -  3.5e-05
+TIM2+F+I+G4     -197851.679  395809.358 -   0.0109  395809.405 -   0.0109  396324.813 - 2.54e-05
+TIM2+F+G4       -197858.030  395820.060 - 5.19e-05  395820.105 -  5.2e-05  396325.789 - 1.56e-05
+TIM3+F+I+G4     -197853.331  395812.662 -   0.0021  395812.708 -   0.0021  396328.116 - 4.86e-06
+TIM3+F+G4       -197859.677  395823.355 - 9.99e-06  395823.399 -    1e-05  396329.083 -    3e-06
+TVM+F+I+G4      -197847.973  395803.946 +    0.164  395803.994 +    0.164  396329.126 - 2.93e-06
+TVM+F+G4        -197854.313  395814.627 - 0.000784  395814.673 - 0.000785  396330.081 - 1.82e-06
+GTR+F+I+G4      -197845.555  395801.111 +    0.675  395801.160 +    0.675  396336.016 - 9.36e-08
+GTR+F+G4        -197851.879  395811.758 -  0.00329  395811.806 -  0.00329  396336.937 - 5.91e-08
+F81+F+I+G4      -198108.964  396317.927 - 4.02e-113  396317.968 - 4.04e-113  396804.204 - 2.02e-109
+F81+F+G4        -198115.520  396329.040 - 1.55e-115  396329.079 - 1.56e-115  396805.592 - 1.01e-109
+TVM+I+G4        -200859.006  401820.013 -        0  401820.056 -        0  402316.016 -        0
+TVMe+I+G4       -200859.007  401820.013 -        0  401820.056 -        0  402316.016 -        0
+TVMe+I+G4       -200859.007  401820.013 -        0  401820.056 -        0  402316.016 -        0
+TVM+G4          -200865.954  401831.909 -        0  401831.950 -        0  402318.186 -        0
+TVMe+G4         -200865.954  401831.909 -        0  401831.950 -        0  402318.186 -        0
+TVMe+G4         -200865.954  401831.909 -        0  401831.950 -        0  402318.186 -        0
+GTR+I+G4        -200854.300  401812.600 -        0  401812.644 -        0  402318.328 -        0
+SYM+I+G4        -200856.002  401816.003 -        0  401816.048 -        0  402321.732 -        0
+SYM+I+G4        -200856.002  401816.003 -        0  401816.048 -        0  402321.732 -        0
+GTR+G4          -200862.989  401827.978 -        0  401828.020 -        0  402323.981 -        0
+SYM+G4          -200863.016  401828.032 -        0  401828.075 -        0  402324.035 -        0
+SYM+G4          -200863.016  401828.032 -        0  401828.075 -        0  402324.035 -        0
+TPM3u+I+G4      -200875.354  401848.708 -        0  401848.748 -        0  402325.260 -        0
+TPM3+I+G4       -200875.354  401848.709 -        0  401848.748 -        0  402325.261 -        0
+TPM3+I+G4       -200875.354  401848.709 -        0  401848.748 -        0  402325.261 -        0
+TPM3u+G4        -200882.148  401860.296 -        0  401860.334 -        0  402327.122 -        0
+TPM3+G4         -200882.149  401860.297 -        0  401860.335 -        0  402327.124 -        0
+TPM3+G4         -200882.149  401860.297 -        0  401860.335 -        0  402327.124 -        0
+TIM3+I+G4       -200872.359  401844.718 -        0  401844.759 -        0  402330.996 -        0
+TIM3e+I+G4      -200872.359  401844.718 -        0  401844.760 -        0  402330.996 -        0
+TIM3e+I+G4      -200872.359  401844.718 -        0  401844.760 -        0  402330.996 -        0
+TPM2u+I+G4      -200879.190  401856.380 -        0  401856.419 -        0  402332.932 -        0
+TPM2+I+G4       -200879.190  401856.380 -        0  401856.419 -        0  402332.932 -        0
+TPM2+I+G4       -200879.190  401856.380 -        0  401856.419 -        0  402332.932 -        0
+TIM3+G4         -200879.203  401856.406 -        0  401856.446 -        0  402332.958 -        0
+TIM3e+G4        -200879.208  401856.416 -        0  401856.456 -        0  402332.968 -        0
+TIM3e+G4        -200879.208  401856.416 -        0  401856.456 -        0  402332.968 -        0
+TPM2u+G4        -200885.884  401867.768 -        0  401867.806 -        0  402334.594 -        0
+TPM2+G4         -200885.884  401867.768 -        0  401867.806 -        0  402334.595 -        0
+TPM2+G4         -200885.884  401867.768 -        0  401867.806 -        0  402334.595 -        0
+TIM2e+I+G4      -200876.108  401852.217 -        0  401852.258 -        0  402338.494 -        0
+TIM2e+I+G4      -200876.108  401852.217 -        0  401852.258 -        0  402338.494 -        0
+TIM2+I+G4       -200876.109  401852.217 -        0  401852.258 -        0  402338.494 -        0
+TIM2+G4         -200882.862  401863.724 -        0  401863.763 -        0  402340.276 -        0
+TIM2e+G4        -200882.864  401863.727 -        0  401863.767 -        0  402340.279 -        0
+TIM2e+G4        -200882.864  401863.727 -        0  401863.767 -        0  402340.279 -        0
+HKY+I+G4        -200892.212  401880.424 -        0  401880.462 -        0  402347.251 -        0
+K2P+I+G4        -200892.212  401880.425 -        0  401880.463 -        0  402347.251 -        0
+K2P+I+G4        -200892.212  401880.425 -        0  401880.463 -        0  402347.251 -        0
+HKY+G4          -200898.759  401891.519 -        0  401891.555 -        0  402348.620 -        0
+K2P+G4          -200898.759  401891.519 -        0  401891.555 -        0  402348.620 -        0
+K2P+G4          -200898.759  401891.519 -        0  401891.555 -        0  402348.620 -        0
+TN+I+G4         -200889.154  401876.309 -        0  401876.348 -        0  402352.861 -        0
+TNe+I+G4        -200889.155  401876.309 -        0  401876.349 -        0  402352.861 -        0
+TNe+I+G4        -200889.155  401876.309 -        0  401876.349 -        0  402352.861 -        0
+TN+G4           -200895.759  401887.519 -        0  401887.557 -        0  402354.345 -        0
+TNe+G4          -200895.759  401887.519 -        0  401887.557 -        0  402354.345 -        0
+TNe+G4          -200895.759  401887.519 -        0  401887.557 -        0  402354.345 -        0
+K3Pu+I+G4       -200891.844  401881.688 -        0  401881.727 -        0  402358.240 -        0
+K3P+I+G4        -200891.844  401881.688 -        0  401881.728 -        0  402358.240 -        0
+K3P+I+G4        -200891.844  401881.688 -        0  401881.728 -        0  402358.240 -        0
+K3Pu+G4         -200898.387  401892.775 -        0  401892.813 -        0  402359.601 -        0
+K3P+G4          -200898.388  401892.776 -        0  401892.814 -        0  402359.602 -        0
+K3P+G4          -200898.388  401892.776 -        0  401892.814 -        0  402359.602 -        0
+TIM+I+G4        -200888.786  401877.572 -        0  401877.613 -        0  402363.850 -        0
+TIMe+I+G4       -200888.786  401877.573 -        0  401877.614 -        0  402363.850 -        0
+TIMe+I+G4       -200888.786  401877.573 -        0  401877.614 -        0  402363.850 -        0
+TIM+G4          -200895.387  401888.775 -        0  401888.814 -        0  402365.327 -        0
+TIMe+G4         -200895.390  401888.780 -        0  401888.820 -        0  402365.332 -        0
+TIMe+G4         -200895.390  401888.780 -        0  401888.820 -        0  402365.332 -        0
+F81+I+G4        -201126.287  402346.575 -        0  402346.611 -        0  402803.676 -        0
+JC+I+G4         -201126.304  402346.609 -        0  402346.645 -        0  402803.710 -        0
+JC+I+G4         -201126.304  402346.609 -        0  402346.645 -        0  402803.710 -        0
+F81+G4          -201133.021  402358.042 -        0  402358.077 -        0  402805.417 -        0
+JC+G4           -201133.038  402358.076 -        0  402358.111 -        0  402805.451 -        0
+JC+G4           -201133.038  402358.076 -        0  402358.111 -        0  402805.451 -        0
+JC+I            -201139.204  402370.407 -        0  402370.442 -        0  402817.783 -        0
+JC+I+R2         -201133.021  402362.042 -        0  402362.080 -        0  402828.868 -        0
+JC+I+R3         -201124.887  402349.775 -        0  402349.816 -        0  402836.052 -        0
+JC+R2           -201142.743  402379.487 -        0  402379.523 -        0  402836.587 -        0
+JC+R3           -201135.216  402368.432 -        0  402368.471 -        0  402844.984 -        0
+JC              -201252.710  402595.420 -        0  402595.454 -        0  403033.070 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: HKY+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.0000
+  A-G: 2.0862
+  A-T: 1.0000
+  C-G: 1.0000
+  C-T: 2.0862
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.294
+  pi(C) = 0.1847
+  pi(G) = 0.2216
+  pi(T) = 0.2996
+
+Rate matrix Q:
+
+  A   -0.9446    0.1843    0.4613    0.2989
+  C    0.2933    -1.138    0.2211    0.6236
+  G    0.6119    0.1843    -1.095    0.2989
+  T    0.2933    0.3845    0.2211   -0.8989
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.4841
+Gamma shape alpha: 1.003
+
+ Category  Relative_rate  Proportion
+  0         0              0.4841
+  1         0.2667         0.129
+  2         0.9259         0.129
+  3         1.939          0.129
+  4         4.622          0.129
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -197850.9167 (s.e. 432.4697)
+Unconstrained log-likelihood (without tree): -890933.7746
+Number of free parameters (#branches + #model parameters): 51
+Akaike information criterion (AIC) score: 395803.8334
+Corrected Akaike information criterion (AICc) score: 395803.8763
+Bayesian information criterion (BIC) score: 396299.8364
+
+Total tree length (sum of branch lengths): 0.2160
+Sum of internal branch lengths: 0.0281 (13.0102% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0000) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Spondianthus_preussii' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Spondianthus_preussii
+|
+|                       +--U_acuminata
+|                    +--| (80)
+|                    |  |     +**U_kirkiana
+|                    |  |  +--| (86)
+|                    |  |  |  |  +--U_nitida
+|                    |  |  |  +**| (69)
+|                    |  |  |     +--U_sansibarica
+|                    |  +--| (45)
+|                    |     |  +--U_rufopilosa
+|                    |     +--| (64)
+|                    |        +--U_teusczii_f_teusczii
+|                 +--| (60)
+|                 |  |           +--U_heudelotii
+|                 |  |        +--| (96)
+|                 |  |        |  +--U_staudtii
+|                 |  |     +--| (67)
+|                 |  |     |  |     +---U_lissopyrena
+|                 |  |     |  |  +--| (100)
+|                 |  |     |  |  |  +--U_togoensis
+|                 |  |     |  +--| (53)
+|                 |  |     |     +**U_mole
+|                 |  |  +--| (78)
+|                 |  |  |  +--U_vanhouttei
+|                 |  +--| (80)
+|                 |     +---U_pilosa
+|              +--| (76)
+|              |  +--U_pynaertii
+|           +--| (58)
+|           |  |     +--U_ambanjensis
+|           |  |  +--| (59)
+|           |  |  |  +----------------------------------------------------U_teusczii_f_pilosa
+|           |  +--| (55)
+|           |     +**U_densifolia
+|        +--| (61)
+|        |  +--U_littoralis
+|     +--| (77)
+|     |  |  +**U_bojeri_2
+|     |  +--| (22)
+|     |     +--U_louvelii
+|  +--| (77)
+|  |  +--U_bojeri_1
++--| (100)
+|  +--U_guineensis
+|
++------U_amplifolia
+
+Tree in newick format:
+
+(Spondianthus_preussii:0.0045142168,((((((((U_acuminata:0.0004020069,((U_kirkiana:0.0000016852,(U_nitida:0.0002005230,U_sansibarica:0.0005728596)69:0.0000019230)86:0.0002943452,(U_rufopilosa:0.0041745305,U_teusczii_f_teusczii:0.0008431404)64:0.0000601061)45:0.0000210127)80:0.0002991875,((((U_heudelotii:0.0004300022,U_staudtii:0.0018980152)96:0.0026820147,((U_lissopyrena:0.0109593783,U_togoensis:0.0017083985)100:0.0047619605,U_mole:0.0000017313)53:0.0002197484)67:0.0018172714,U_vanhouttei:0.0008331406)78:0.0006814735,U_pilosa:0.0115404682)80:0.0024190156)60:0.0000289012,U_pynaertii:0.0017021428)76:0.0003011989,((U_ambanjensis:0.0006282292,U_teusczii_f_pilosa:0.1279547691)59:0.0002533212,U_densifolia:0.0000022755)55:0.0002032127)58:0.0000518299,U_littoralis:0.0003402623)61:0.0001569925,(U_bojeri_2:0.0000016842,U_louvelii:0.0006634683)22:0.0000507320)77:0.0041037202,U_bojeri_1:0.0000790402)77:0.0023214842,U_guineensis:0.0017965515)100:0.0073742897,U_amplifolia:0.0166605409);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -197850.96322404
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.00000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Spondianthus_preussii
+|
+|                          +--U_acuminata
+|                       +--| (80)
+|                       |  |     +--U_kirkiana
+|                       |  |  +--| (86)
+|                       |  |  |  |  +--U_nitida
+|                       |  |  |  +**| (69)
+|                       |  |  |     +--U_sansibarica
+|                       |  +--| (45)
+|                       |     |  +--U_rufopilosa
+|                       |     +--| (64)
+|                       |        +--U_teusczii_f_teusczii
+|                    +--| (60)
+|                    |  |           +--U_heudelotii
+|                    |  |        +--| (96)
+|                    |  |        |  +--U_staudtii
+|                    |  |     +--| (67)
+|                    |  |     |  |     +---U_lissopyrena
+|                    |  |     |  |  +--| (100)
+|                    |  |     |  |  |  +--U_togoensis
+|                    |  |     |  +--| (53)
+|                    |  |     |     +**U_mole
+|                    |  |  +--| (78)
+|                    |  |  |  +--U_vanhouttei
+|                    |  +--| (80)
+|                    |     +---U_pilosa
+|                 +--| (76)
+|                 |  +--U_pynaertii
+|              +--| (58)
+|              |  |     +--U_ambanjensis
+|              |  |  +--| (59)
+|              |  |  |  +----------------------------------------------------U_teusczii_f_pilosa
+|              |  +--| (55)
+|              |     +**U_densifolia
+|           +**| (61)
+|           |  +--U_littoralis
+|        +--| (54)
+|        |  +--U_louvelii
+|     +--| (77)
+|     |  +--U_bojeri_2
+|  +--| (77)
+|  |  +--U_bojeri_1
++--| (100)
+|  +--U_guineensis
+|
++------U_amplifolia
+
+
+Consensus tree in newick format: 
+
+(Spondianthus_preussii:0.0045116106,(((((((((U_acuminata:0.0004021948,((U_kirkiana:0.0000021855,(U_nitida:0.0002010466,U_sansibarica:0.0005733349)69:0.0000016969)86:0.0002945414,(U_rufopilosa:0.0041746235,U_teusczii_f_teusczii:0.0008439235)64:0.0000603480)45:0.0000215502)80:0.0002981347,((((U_heudelotii:0.0004297738,U_staudtii:0.0018988263)96:0.0026783188,((U_lissopyrena:0.0109584000,U_togoensis:0.0017065686)100:0.0047635784,U_mole:0.0000018761)53:0.0002182663)67:0.0018209139,U_vanhouttei:0.0008336211)78:0.0006819583,U_pilosa:0.0115402384)80:0.0024196521)60:0.0000294658,U_pynaertii:0.0017032474)76:0.0003008256,((U_ambanjensis:0.0006221298,U_teusczii_f_pilosa:0.1279472281)59:0.0002616845,U_densifolia:0.0000014049)55:0.0002018161)58:0.0000518995,U_littoralis:0.0003399456)61:0.0000016582,U_louvelii:0.0006630506)54:0.0001556113,U_bojeri_2:0.0000522175)77:0.0041035882,U_bojeri_1:0.0000788901)77:0.0023497233,U_guineensis:0.0017733131)100:0.0073696824,U_amplifolia:0.0166493220);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t data/plastome_seq/plastome.fasta.concat.treefile -m "HKY{2.08625}+F{0.293985,0.184743,0.22165,0.299621}+I{0.484103}+G4{1.00309}" --length 123692
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data/plastome_seq/plastome.fasta.concat --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data/plastome_seq/plastome.fasta.concat --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Sun Oct 18 18:19:55 2026
+Total CPU time used: 8550.620414 seconds (2h:22m:30s)
+Total wall-clock time used: 2181.447649 seconds (0h:36m:21s)
+

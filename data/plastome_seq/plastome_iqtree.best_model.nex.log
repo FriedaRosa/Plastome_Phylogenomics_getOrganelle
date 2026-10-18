@@ -1,0 +1,15 @@
+IQ-TREE version 3.1.1 for Linux x86 64-bit built Apr  8 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    emb-lap-frwo (AVX2, FMA3, 15 GB RAM)
+Command: iqtree --alisim simulated_MSA -t data/plastome_seq/plastome_iqtree.treefile -p data/plastome_seq/plastome_iqtree.best_model.nex -seed 12345678910
+Seed:    539222978 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Oct 18 19:44:57 2026
+Kernel:  AVX+FMA - 1 threads (14 CPU cores detected)
+
+Reading partition model file data/plastome_seq/plastome_iqtree.best_model.nex ...
+ERROR: 
+ERROR: Error found at line 5, column 51 (file position 140):
+ERROR: CharSet 5 not found
