@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Download Bischofia chloroplast genome from GenBank
 curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MZ826267.1&rettype=gbwithparts&retmode=text" -o data/Bischofia_MZ826267.gb
 
