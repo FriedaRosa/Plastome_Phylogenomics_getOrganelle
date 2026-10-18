@@ -1,0 +1,58 @@
+[#Plastome](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle)
+
+### Software requirements:
+- python=3.10
+- biopython
+- sra-tools
+- getorganelle
+- mafft
+- trimal
+- blast
+- amas
+
+### Workflow:
+[0a_setup_software.sh](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/0a_setup_software.sh)
+- setup conda environment 'plastomes' with python=3.10
+- install software requirements
+- download and initialize database of mt and pt plant genomes via `get_organelle_config.py`
+
+[0b_setup_data.sh](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/0b_setup_data.sh)
+- download public chloroplast genomes from GenBank that are available for my target clade
+- run [1_extract_genes.py](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/1_extract_genes.py) to use GenBank metadata of the chloroplast genome to extract and classify genes from downloaded GenBank sequence (CDS, tRNA, rRNA, genes). Extract also gene name, locus tag, product and rename gene name to locus name if NA. Write the annotaded chloroplast genome to `data/genes.fasta`.
+- use `fastq-dump` to split paired-end reads of GenBank chloroplast genome into separate files, compresses them with gzip, and saves them in `data/`
+- create symlinks of trimmed data
+
+[1b_split_genes_to_fasta.py](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/1b_split_genes_to_fasta.py)
+- python user-defined function to extract genes from CDS (as alternative to fastq-dump)
+
+[2_run_getOrganelle_clean.sh](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/2_run_getOrganelle_clean.sh)
+- use `genes.fasta` (from `1_extract_genes.py`) as `seed` in `get_organelle_from_reads.py` and use paired and unpaired forward and reverse reads to assemble chloroplast genomes from species sequences.
+
+[3_archive_plastomes.sh](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/3_archive_plastomes.sh)
+- keep only one file + log per species. The folder `data/genes/getorganelle_output/archive_plastome` is supposed to be kept.
+
+[4_blast_genes.R](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/4_blast_genes.R)
+- required R packages: `ape`, `dplyr`, `purrr`, `readr`, `stringr`
+- reformats sequence-headers to include sample name and save them into a temporary folder
+- combine all plastome sequences into a single file for blasting (`data/TEMP/plastomes_combined.fasta`)
+- run BLAST on each sample
+- calculate statistics for QC from the blast results (for each sample: per gene length and coverage: `blast_coverage_by_gene_per_species.tsv`; for each species: number of recovered genes and mean coverage: `plastome_seq_summary.tsv`)
+- removes all samples with < 10 genes  **_#TO DO: increase this parameter in the next trials_**
+
+
+[5_align_genes](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/5_align_genes.sh)
+- uses `mafft` to align the plastome sequences by gene
+
+[6_trim_alignments](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/6_trim_alignments.sh)
+- uses `trimal` with base settings (`-automated1`) to determine removal scores
+
+[7_concatenate_alignments.sh](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/7_concatenate_alignments.sh)
+- uses `amas` to concatenate trimmed alignments into `plastome.fasta.concat`
+
+[8_concat_tree_iqtree.sh](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/8_concat_tree_iqtree.sh)
+- uses GTR+G model and 1000 ultrafast bootstraps in `IQtree` to infer a species tree from the concatenated plastome sequences (`plastome.fasta.concat`) **_#TO DO: use ModelFinder in addition for next trials_**
+
+[9_plot_tree.R](https://github.com/FriedaRosa/Plastome_Phylogenomics_getOrganelle/blob/main/scripts/9_plot_tree.R)
+- uses library: `ape`
+- roots the phylogeny at the outgroup (_Spondianthus preusii_)
+- plots the tree with node label support (folder `figures`)
