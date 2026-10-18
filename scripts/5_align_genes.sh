@@ -17,7 +17,7 @@ else
   for f in "$alndir"/*.fasta; do
     mafft \
       --maxiterate 1000 \
-      --localpair \
+      --genafpair \
       --thread -1 \
       "$f" > "$f.mafft"
   done
