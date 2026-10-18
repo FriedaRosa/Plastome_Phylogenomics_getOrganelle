@@ -7,9 +7,12 @@ source /home/frieda/miniconda3/etc/profile.d/conda.sh
 conda activate iqtree
 
 aln=data/plastome_seq/plastome.fasta.concat
+prefix=data/plastome_seq/plastome_iqtree
 # 1000 ultrafast bootstraps
 iqtree \
--s $aln \
+-s "$aln" \
+-p partitions.txt \
+-pre "$prefix" \
 -m MFP \
 -mtree \
 -T 4 \
