@@ -3,7 +3,14 @@
 *.fq.gz
 *.fastq.gz
 *fq
+*nex
+*bionj
+*.gz
+*.mldist
+*.phy
+*.best_scheme
+*mafft*
 data/getorganelle_output/
-data/plastome_seq/
 data/TEMP/
-data/SRR26662821_1.fastq.gz
+
+!*.tsv
