@@ -7,6 +7,9 @@
 *bionj
 *.gz
 *.mldist
+*.treefile
+*.contree
+*.concat
 *.phy
 *.best_scheme
 *mafft*
