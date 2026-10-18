@@ -39,3 +39,8 @@ for s in *; do
   fi
 done
 printf "%s\n" "${noseq[@]}" > samples_without_seq.txt
+
+
+# within data/getorganelle_output, delete all folders and internal files except archive_plastomes
+cd ..
+rm -rf $(ls | grep -v archive_plastomes)
