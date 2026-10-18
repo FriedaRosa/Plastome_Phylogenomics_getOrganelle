@@ -5,7 +5,7 @@ from Bio.SeqRecord import SeqRecord
 
 p = argparse.ArgumentParser(description="Extract CDS/tRNA/rRNA from GenBank")
 p.add_argument("-i","--infile", default="data/Bischofia_MZ826267.gb")
-p.add_argument("-o","--outfile", default="data/genes.fa")
+p.add_argument("-o","--outfile", default="data/genes.fasta")
 args = p.parse_args()
 
 recs = list(SeqIO.parse(args.infile, "genbank"))
