@@ -85,6 +85,8 @@ blast_res <- blast_res %>%
   mutate(length = nchar(sequence)) %>%
   mutate(coverage = length / reflen[gene])
 
+write.csv(blast_res, file = "data/plastome_seq/blast_coverage_by_gene_per_species.tsv", row.names = FALSE)
+
 # per sample, get # of genes and average coverage
 # (before filtering)
 plastome_tab <- blast_res %>%
