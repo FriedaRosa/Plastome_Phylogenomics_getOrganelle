@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 ## Split into separate files
 from Bio import SeqIO
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+source /home/frieda/miniconda3/etc/profile.d/conda.sh
 conda activate plastomes
 
 reads_dir="data/trimmed_reads"
@@ -20,6 +21,12 @@ for sample in $(ls "$reads_dir"/*_1_clean.paired.fq.gz | sed 's/_1_clean.paired.
   forward_unpaired="$reads_dir/${sample_name}_1_clean.unpaired.fq.gz"
   reverse_unpaired="$reads_dir/${sample_name}_2_clean.unpaired.fq.gz"
 
+
+# -o output directory for the results
+# -s seed file for the organelle genome
+# -k k-mer sizes to use for assembly (comma-separated list)
+# -R number of reads to use for assembly (default: 15)
+
   get_organelle_from_reads.py \
   -1 "$forward_paired" \
   -2 "$reverse_paired" \
@@ -35,5 +42,4 @@ for sample in $(ls "$reads_dir"/*_1_clean.paired.fq.gz | sed 's/_1_clean.paired.
 
 done
 
-
-conda deactivate plastomes
+conda deactivate
